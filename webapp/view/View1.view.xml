@@ -1,0 +1,46 @@
+<mvc:View xmlns:table="sap.ui.table"
+    controllerName="tables.controller.View1"
+    xmlns:mvc="sap.ui.core.mvc"
+    displayBlock="true"
+    xmlns="sap.m"
+>
+	<Page id="page1" showHeader="false" >
+            <Table columns="{Title>/Products}" items="{/d/results}">
+                	<headerToolbar>
+                    <OverflowToolbar>
+                        <content>
+                            <Title text="Products" level="H3" />
+                            <ToolbarSpacer />
+                            <Button text="Employees" press="onEmployees" type="Accept"></Button>
+                            <Button text="Customers" press="onCustomers" type="Accept"></Button>
+                            <Button text="Orders" press="onOrders" type="Accept"></Button>
+                        </content>
+                    </OverflowToolbar>
+                </headerToolbar>
+                <infoToolbar>
+                    <OverflowToolbar>
+                        <Label text="Wide range of available products" />
+                    </OverflowToolbar>
+                </infoToolbar>
+                <columns>
+                    <Column >
+                        <Title text="{Title>title}" level="H1"></Title>
+                    </Column>
+                </columns>
+                <items>
+                    <ColumnListItem >
+                        <cells>
+                            <Text text="{ProductID}"></Text>
+                            <Text text="{ProductName}"></Text>
+                            <Text text="{SupplierID}"></Text>
+                            <Text text="{QuantityPerUnit}"></Text>
+                            <Text text="{UnitPrice}"></Text>
+                            <Text text="{UnitsInStock}"></Text>
+                            
+
+                        </cells>
+                    </ColumnListItem>
+                </items>
+            </Table>
+    </Page>
+</mvc:View>

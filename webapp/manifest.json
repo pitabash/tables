@@ -1,0 +1,160 @@
+{
+	"_version": "1.32.0",
+	"sap.app": {
+		"id": "tables",
+		"type": "application",
+		"i18n": "i18n/i18n.properties",
+		"applicationVersion": {
+			"version": "1.0.0"
+		},
+		"title": "{{appTitle}}",
+		"description": "{{appDescription}}",
+		"resources": "resources.json",
+		"ach": "ach"
+	},
+	"sap.ui": {
+		"technology": "UI5",
+		"icons": {
+			"icon": "sap-icon://task",
+			"favIcon": "",
+			"phone": "",
+			"phone@2": "",
+			"tablet": "",
+			"tablet@2": ""
+		},
+		"deviceTypes": {
+			"desktop": true,
+			"tablet": true,
+			"phone": true
+		}
+	},
+
+	"sap.ui5": {
+
+		"flexEnabled": false,
+		"rootView": {
+			"viewName": "tables.view.App",
+			"type": "XML",
+			"async": true,
+			"id": "App"
+		},
+
+		"dependencies": {
+			"minUI5Version": "1.66.0",
+			"libs": {
+				"sap.ui.core": {},
+				"sap.m": {},
+				"sap.ui.layout": {}
+			}
+		},
+
+		"contentDensities": {
+			"compact": true,
+			"cozy": true
+		},
+
+		"models": {
+			"": {
+				"type": "sap.ui.model.json.JSONModel",
+				"uri": "model/sampleData/Products.json"
+			},
+			"Employees": {
+				"type": "sap.ui.model.json.JSONModel",
+				"uri": "model/sampleData/Employees.json"
+			},
+			"Customers": {
+				"type": "sap.ui.model.json.JSONModel",
+				"uri": "model/sampleData/Customers.json"
+			},
+			"Orders": {
+				"type": "sap.ui.model.json.JSONModel",
+				"uri": "model/sampleData/Orders.json"
+            },
+            "Title": {
+				"type": "sap.ui.model.json.JSONModel",
+				"uri": "model/sampleData/Title.json"
+			},
+			"i18n": {
+				"type": "sap.ui.model.resource.ResourceModel",
+				"settings": {
+					"bundleName": "tables.i18n.i18n"
+				}
+			}
+		},
+
+		"resources": {
+			"css": [{
+				"uri": "css/style.css"
+			}]
+		},
+
+		"routing": {
+
+			"config": {
+				"routerClass": "sap.m.routing.Router",
+				"viewType": "XML",
+				"async": true,
+				"viewPath": "tables.view",
+				"controlAggregation": "pages",
+				"controlId": "app",
+				"clearControlAggregation": false
+			},
+			"routes": [
+				{
+					"name": "view1",
+					"pattern": "",
+					"target": ["TargetView1"]
+				},
+				{
+					"name": "view2",
+					"pattern": "RouteView2",
+					"target": ["TargetView2"]
+				},
+				{
+					"name": "view3",
+					"pattern": "RouteView3",
+					"target": ["TargetView3"]
+				},
+				{
+					"name": "view4",
+					"pattern": "RouteView4",
+					"target": ["TargetView4"]
+				}
+			],
+
+			"targets": {
+				"TargetView1": {
+					"viewType": "XML",
+					"transition": "slide",
+					"clearControlAggregation": false,
+					"viewId": "view1",
+					"viewName": "View1"
+				},
+				"TargetView2": {
+					"viewType": "XML",
+					"transition": "slide",
+					"clearControlAggregation": false,
+					"viewId": "view2",
+					"viewName": "View2"
+				},
+				"TargetView3": {
+					"viewType": "XML",
+					"transition": "slide",
+					"clearControlAggregation": false,
+					"viewId": "view3",
+					"viewName": "View3"
+				},
+				"TargetView4": {
+					"viewType": "XML",
+					"transition": "slide",
+					"clearControlAggregation": false,
+					"viewId": "view4",
+					"viewName": "View4"
+				}
+
+			}
+
+		}
+
+	}
+}

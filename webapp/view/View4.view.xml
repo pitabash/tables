@@ -1,0 +1,46 @@
+<mvc:View
+    controllerName="tables.controller.View4"
+    xmlns:mvc="sap.ui.core.mvc"
+    displayBlock="true"
+    xmlns="sap.m"
+>
+	<Page id="page4" showHeader="false">
+        <Table columns="{Title>/Orders}" items="{Orders>/d/results}">
+                	<headerToolbar>
+                    <OverflowToolbar>
+                        <content>
+                            <Title text="Orders" level="H3" />
+                            <ToolbarSpacer />
+                            <Button text="Products" press="onProducts" type="Accept"></Button>
+                            <Button text="Employees" press="onEmployees" type="Accept"></Button>
+                            <Button text="Customers" press="onCustomers" type="Accept"></Button>
+                        </content>
+                    </OverflowToolbar>
+                </headerToolbar>
+                <infoToolbar>
+                    <OverflowToolbar>
+                        <Label text="All the orders detail" />
+                    </OverflowToolbar>
+                </infoToolbar>
+                <columns>
+                    <Column >
+                        <Title text="{Title>title}" level="H1"></Title>
+                    </Column>
+                </columns>
+                <items>
+                    <ColumnListItem >
+                        <cells>
+                            <Text text="{Orders>OrderID}"></Text>
+                            <Text text="{Orders>CustomerID}"></Text>
+                            <Text text="{Orders>EmployeeID}"></Text>
+                            <Text text="{Orders>ShipName}"></Text>
+                            <Text text="{Orders>ShipAddress}"></Text>
+                            <Text text="{Orders>ShipCountry}"></Text>
+                            
+
+                        </cells>
+                    </ColumnListItem>
+                </items>
+            </Table>
+    </Page>
+</mvc:View>

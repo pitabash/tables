@@ -1,0 +1,82 @@
+{
+    "Products" :[
+        {
+            "title" : "Product Id"
+        },
+        {
+            "title" : "Product Name"
+        },
+        {
+            "title" : "Supplier ID"
+        },
+        {
+            "title" : "Quantity per Unit"
+        },
+        {
+            "title" : "Unit Price"
+        },
+        {
+            "title" : "Units In Stock"
+        }
+    ],
+    "Employees" : [
+        {
+            "title" : "Employee Id"
+        },
+        {
+            "title" : "Employee Name"
+        },
+        {
+            "title" : "Title"
+        },
+        {
+            "title" : "Address"
+        },
+        {
+            "title" : "Postal Code"
+        },
+        {
+            "title" : "Country"
+        }
+    ],
+    "Customers" : [
+        {
+            "title" : "Customer Id"
+        },
+        {
+            "title" : "Company Name"
+        },
+        {
+            "title" : "Contact Name"
+        },
+        {
+            "title" : "Contact Title"
+        },
+        {
+            "title" : "Phone"
+        },
+        {
+            "title" : "Country"
+        }
+    ],
+    "Orders":[
+        {
+            "title" : "Order ID"
+        },
+        {
+            "title" : "Customer ID"
+        },
+        {
+            "title" : "Employee ID"
+        },
+        {
+            "title" : "Ship Name"
+        },
+        {
+            "title" : "Ship Address"
+        },
+        {
+            "title" : "Ship Country"
+        }
+    ]
+}
